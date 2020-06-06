@@ -27,3 +27,7 @@ if [ $? = 0 ]; then
         reboot-to-windows
 fi
 ```
+  
+## LXQT Run apps without prompt
+You can disable it in `PCmanfm > preferences > Launch executable files without prompt`  
+[Link](https://github.com/lxqt/lxqt/issues/1523#issuecomment-406578815)
