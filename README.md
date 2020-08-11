@@ -31,3 +31,7 @@ fi
 ## LXQT Run apps without prompt
 You can disable it in `PCmanfm > preferences > Launch executable files without prompt`  
 [Link](https://github.com/lxqt/lxqt/issues/1523#issuecomment-406578815)
+
+## Mouse wheel adjust sound volume instead of page scrolling
+Hold DPI button of mouse for 5 seconds.  
+
