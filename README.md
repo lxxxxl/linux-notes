@@ -35,3 +35,7 @@ You can disable it in `PCmanfm > preferences > Launch executable files without p
 ## Mouse wheel adjust sound volume instead of page scrolling
 Hold DPI button of mouse for 5 seconds.  
 
+## 404  Not Found while performing apt-get update
+Problem occurs when your distro lifecycle come to it's end.  
+In `/etc/apt/sources.list` replace all occurencies of `archive.ubuntu.com` with `old-releases.ubuntu.com`  
+[Link](https://www.digitalocean.com/community/questions/i-cannot-update-from-19-04-to-19-10-no-longer-has-a-release-file)
