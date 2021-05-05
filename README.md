@@ -28,6 +28,19 @@ if [ $? = 0 ]; then
 fi
 ```
   
+## GRUB 2.0 boot from ISO file
+This is example for Ubuntu distro. Other distros would have another kernel paths and options.   
+```bash
+menuentry "ISO boot" {
+   insmod part_msdos
+   insmod ntfs
+   set isofile="/ubuntu.iso"
+   loopback loop (hd1,msdos1)$isofile
+   linux (loop)/casper/vmlinuz boot=casper iso-scan/filename=$isofile noprompt noeject
+   initrd (loop)/casper/initrd
+}
+```
+  
 ## LXQT Run apps without prompt
 You can disable it in `PCmanfm > preferences > Launch executable files without prompt`  
 [Link](https://github.com/lxqt/lxqt/issues/1523#issuecomment-406578815)
