@@ -58,3 +58,25 @@ If you are using VMWare Player with `Ubuntu Linux` to enable _copy-paste_ functi
 ```bash
 sudo apt install open-vm-tools
 ```
+## Uninstall Google Services from Android
+```bash
+pm list packages | grep google
+```
+> package:com.google.android.youtube  
+> package:com.google.android.configupdater  
+> package:com.google.android.setupwizard  
+> package:com.google.android.packageinstaller  
+> package:com.google.android.gms  
+> package:com.google.android.tts  
+> package:com.google.android.partnersetup  
+> package:com.google.android.feedback  
+> package:com.google.android.gsf.login  
+```bash
+pm path com.google.android.gms
+```
+> package:/system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk  
+```bash
+mount -o remount,rw /system
+rm /system/priv-app/PrebuiltGmsCore/PrebuiltGmsCore.apk
+reboot
+```
