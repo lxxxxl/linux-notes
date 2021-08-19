@@ -58,3 +58,14 @@ If you are using VMWare Player with `Ubuntu Linux` to enable _copy-paste_ functi
 ```bash
 sudo apt install open-vm-tools
 ```
+
+## A stop job is running for Session c2 of user
+A workaround to this problem is to reduce this timeout in `/etc/systemd/system.conf` down from 90s to for example 10s:
+```
+DefaultTimeoutStopSec=10s
+```
+and run the following command in terminal after making changes
+```
+$ systemctl daemon-reload
+```
+[Link](https://unix.stackexchange.com/a/297318)
