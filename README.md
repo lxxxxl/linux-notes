@@ -92,3 +92,12 @@ and run the following command in terminal after making changes
 $ systemctl daemon-reload
 ```
 [Link](https://unix.stackexchange.com/a/297318)
+
+## Increase KDE boot speed
+1. Set `System Settings -> Workplace Theme -> Splash screen` to None
+2. Disable preserving old session from `System Settings -> Startup and Shutdown -> Desktop Session -> On Login -> Start an empty Session`.
+3. DIsable problematic services. Check service boot time:
+```
+systemd-analyze blame
+systemd-analyze plot > plot.svg
+```
