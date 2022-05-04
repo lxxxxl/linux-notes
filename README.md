@@ -113,3 +113,12 @@ xz -dc backup.xz | dd of=/dev/sda1 bs=2048 # restore
 2. Press and hold Power On OR Channel+ button on TV
 3. Power on TV while holding button
 4. Hold button 20 seconds more while factory reset screen apperas
+
+## Fix for "A stop job is running ..."
+on /etc/systemd/logind.conf uncomment this line:  
+> KillUserProcesses=true  
+
+on /etc/systemd/system.conf uncomment this lines:  
+> DefaultTimeoutStartSec=3s  
+> DefaultTimeoutStopSec=3s  
+> TimeoutSec=3s  
