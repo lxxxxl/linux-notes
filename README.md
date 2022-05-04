@@ -101,3 +101,9 @@ $ systemctl daemon-reload
 systemd-analyze blame
 systemd-analyze plot > plot.svg
 ```
+
+## partition backup with XZ compression
+```
+dd if=/dev/sda1 | xz -9 -c - > backup.xz # backup
+xz -dc backup.xz | dd of=/dev/sda1 bs=2048 # restore
+```
