@@ -107,3 +107,9 @@ systemd-analyze plot > plot.svg
 dd if=/dev/sda1 | xz -9 -c - > backup.xz # backup
 xz -dc backup.xz | dd of=/dev/sda1 bs=2048 # restore
 ```
+
+## Yandex TV factory reset
+1. Unplug TV from AC input
+2. Press and hold Power On OR Channel+ button on TV
+3. Power on TV while holding button
+4. Hold button 20 seconds more while factory reset screen apperas
