@@ -1,4 +1,17 @@
-## Gave up waiting for suspend/resume device
+# Contents  
+- [Gave up waiting for suspend resume device](#gave-up-waiting-for-suspend-resume-device)
+- [GRUB reboot to Windows once](#grub-reboot-to-windows-once)
+- [GRUB boot from ISO file](#grub-boot-from-iso-file)
+- [LXQT Run apps without prompt](#lxqt-run-apps-without-prompt)
+- [Mouse wheel adjust sound volume instead of page scrolling](#mouse-wheel-adjust-sound-volume-instead-of-page-scrolling)
+- [404  Not Found while performing apt-get update](404--not-found-while-performing-apt-get-update)
+- [Copy-Paste to Ubuntu Linux VM](copy-paste-to-ubuntu-linux-vm)
+- [A stop job is running for Session c2 of user](#a-stop-job-is-running-for-session-c2-of-user)
+- [Increase KDE boot speed](#increase-kde-boot-speed)
+- [Partition backup with XZ compression](#partition-backup-with-xz-compression)
+- [Turn off plymouth boot screen](#turn-off-plymouth-boot-screen)
+
+## Gave up waiting for suspend resume device
 Problem occurs after SWAP partition removal.  
 Fix:  
 1. Remove SWAP partition info from _/etc/default/grub_  
@@ -7,7 +20,7 @@ Fix:
 4. Reboot  
 [Link](https://debianforum.ru/index.php?topic=13665.0)
   
-## GRUB 2.0 reboot to Windows once
+## GRUB reboot to Windows once
 Save the `~/.bashrc` file with new `reboot-to-windows` function:
 ```bash
 function reboot-to-windows {
@@ -25,7 +38,7 @@ if [ $? = 0 ]; then
 fi
 ```
   
-## GRUB 2.0 boot from ISO file
+## GRUB boot from ISO file
 This is example for Ubuntu distro. Other distros would have another kernel paths and options.   
 ```bash
 menuentry "ISO boot" {
