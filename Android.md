@@ -1,3 +1,8 @@
+# Contents
+- [Uninstall Google Services from Android](#uninstall-google-services-from-android)
+- [Yandex TV factory reset](#yandex-tv-factory-reset)
+
+
 ## Uninstall Google Services from Android
 ```bash
 pm list packages | grep google
