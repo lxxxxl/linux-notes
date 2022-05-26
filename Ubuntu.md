@@ -100,6 +100,10 @@ sudo systemctl disable NetworkManager-wait-online.service
 sudo systemctl disable ModemManager.service
 # recreates xorg.conf file on reboot
 sudo systemctl disable gpu-manager.service
+# sends kernel crash logs somewhere
+sudo systemctl disable kerneloops
+# sends app crash reports to Canonical
+sudo systemctl disable whoopsie
 ```
   
 ## Partition backup with XZ compression
