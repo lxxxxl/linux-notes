@@ -10,6 +10,7 @@
 - [Increase KDE boot speed](#increase-kde-boot-speed)
 - [Partition backup with XZ compression](#partition-backup-with-xz-compression)
 - [Turn off plymouth boot screen](#turn-off-plymouth-boot-screen)
+- [Arduino Programmer not responding](#arduino-programmer-not-responding)
 
 ## Gave up waiting for suspend resume device
 Problem occurs after SWAP partition removal.  
@@ -122,3 +123,9 @@ to
 
 then run `sudo update-grub`
 
+## Arduino Programmer not responding
+With Arduino Nano getting this error:  
+> Arduino : avrdude: stk500_recv(): programmer is not responding
+
+Solution:  
+On Processor tab select __ATMega328P (Old bootloader)__
