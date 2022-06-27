@@ -1,6 +1,8 @@
 # Contents
 - [Uninstall Google Services from Android](#uninstall-google-services-from-android)
 - [Yandex TV factory reset](#yandex-tv-factory-reset)
+- [Kernel compilation](#kernel-compilation)
+- [Cross compilation](#cross-compilation)
 
 
 ## Uninstall Google Services from Android
@@ -35,6 +37,7 @@ reboot
 
 ## Kernel compilation
 
+### Kernel
 ```bash
 # get toolchain
 mkdir workdir && cd workdir
@@ -61,7 +64,7 @@ export PATH=$PATH:$LINUX_GCC_CROSS_COMPILE_PREBUILTS_BIN:$CLANG_PREBUILT_BIN
 make $BUILDPARAMS mrproper
 ```
 
-## Build separate kernel module
+### Separate module
 ```bash
 make -C <path_to_kernel_src> M=$PWD
 ```
