@@ -8,18 +8,18 @@
 sudo reflector --country Russia --latest 15 --age 2 --fastest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-## Fn keys in QTerminal
-If the function keys do not work, use the following alternatives:
-Key | Alt 1 | Alt 2
--------------------
-F1 | Alt+1 | Esc 1
-F2 | Alt+2 | Esc 2
-F3 | Alt+3 | Esc 3
-F4 | Alt+4 | Esc 4
-F5 | Alt+5 | Esc 5
-F6 | Alt+6 | Esc 6
-F7 | Alt+7 | Esc 7
-F8 | Alt+8 | Esc 8
+## Fn keys in QTerminal  
+If the function keys do not work, use the following alternatives:  
+| Key | Alt 1 | Alt 2 |
+|----|-------|--------|
+| F1 | Alt+1 | Esc 1  |
+| F2 | Alt+2 | Esc 2  | 
+| F3 | Alt+3 | Esc 3  |
+| F4 | Alt+4 | Esc 4  |
+| F5 | Alt+5 | Esc 5  |
+| F6 | Alt+6 | Esc 6  |
+| F7 | Alt+7 | Esc 7  |
+| F8 | Alt+8 | Esc 8  |
 
 
 ## Git
