@@ -11,6 +11,7 @@
 - [Partition backup with XZ compression](#partition-backup-with-xz-compression)
 - [Turn off plymouth boot screen](#turn-off-plymouth-boot-screen)
 - [Arduino Programmer not responding](#arduino-programmer-not-responding)
+- [CPU Frequency scaling](#cpu-frequency-scaling)
 
 ## Gave up waiting for suspend resume device
 Problem occurs after SWAP partition removal.  
@@ -129,3 +130,18 @@ With Arduino Nano getting this error:
 
 Solution:  
 On Processor tab select __ATMega328P (Old bootloader)__
+
+## CPU frequency scaling
+```
+echo GOVERNOR | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+
+
+| Governor | Description |
+|----------|-------------|
+| performance | Run the CPU at the maximum frequency, obtained from /sys/devices/system/cpu/cpuX/cpufreq/scaling_max_freq. |
+| powersave | Run the CPU at the minimum frequency, obtained from /sys/devices/system/cpu/cpuX/cpufreq/scaling_min_freq. |
+| userspace | Run the CPU at user specified frequencies, configurable via /sys/devices/system/cpu/cpuX/cpufreq/scaling_setspeed. |
+| ondemand | Scales the frequency dynamically according to current load. Jumps to the highest frequency and then possibly back off as the idle time increases. |
+| conservative | Scales the frequency dynamically according to current load. Scales the frequency more gradually than ondemand. |
+| schedutil | Scheduler-driven CPU frequency selection. |
