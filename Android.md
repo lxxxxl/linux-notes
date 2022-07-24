@@ -78,3 +78,20 @@ make -C <path_to_kernel_src> M=$PWD
 ```bash
 CROSS_COMPILE=/path/to/toolchain/bin/arm-linux-androideabi- CC=/path/to/toolchain/bin/arm-linux-androideabi-clang ./configure --host=aarch64-linux-android- 
 ```
+
+### CMake
+```bash
+cmake -DCMAKE_TOOLCHAIN_FILE=android.toolchain.cmake -DANDROID_NDK=<ndk_path> -DCMAKE_BUILD_TYPE=Release -DANDROID_ABI="armeabi-v7a with NEON" <source_path> && cmake --build .
+```
+android.toolchain.cmake example:
+```
+# Target system
+set(CMAKE_SYSTEM_NAME  Android)
+
+set(CMAKE_SYSTEM_VERSION 1)
+
+# Compiler to build for the target
+set(CMAKE_C_COMPILER /opt/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-gcc)
+set(CMAKE_CXX_COMPILER /opt/arm-linux-androideabi-4.8/bin/arm-linux-androideabi-g++)
+```
+
